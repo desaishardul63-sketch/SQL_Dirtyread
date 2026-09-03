@@ -41,15 +41,15 @@ CREATE TABLE enrollment (
      FOREIGN KEY (course_id) REFERENCES course(course_id)
      );
 
-INSERT INTO department Values(1, 'Artificial intelligence'), (2, 'Electrical');
+INSERT INTO department Values(1, 'Electronics'), (2, 'Mechanical');
 
 
 
 
-      INSERT INTO student VALUES (101, 'Chaitanya', 'chaitanya@mail.com', '123456789012', 1, 8.50, 'TXN1001');
-      INSERT INTO student VALUES (102, 'Manaswi', 'manaswi@mail.com', '987654321098', 2, 9.10, 'TXN1002');
+      INSERT INTO student VALUES (101, 'Aalok', 'aalok@mail.com', '5482111399', 1, 8.88, 'TXN1001');
+      INSERT INTO student VALUES (102, 'Shardul', 'eceshardul@mail.com', '986547234', 2, 8.33, 'TXN1002');
 
-       INSERT INTO course Values(701, 'DBMS', 1 ),(702, 'Circuits', 2);
+       INSERT INTO course Values(701, 'ACD', 1 ),(702, 'Mechanics', 2);
 
        INSERT INTO enrollment Values (101, 701, 3, 'A');
        INSERT INTO enrollment Values (101, 702, 3, 'A'); -- same student, different course; allowed
@@ -63,7 +63,7 @@ SELECT * FROM department;
 START TRANSACTION;
 
 UPDATE student 
-SET cgpa = 9.6
+SET cgpa = 8.88
 WHERE roll_no = 101;
 
 -- (Session B) 
